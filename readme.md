@@ -17,3 +17,4 @@ find me in pacific ocean
 
 
 
+[link to week1 assignments page](https://github.com/lizhou94/cim640/tree/master/week%201)
