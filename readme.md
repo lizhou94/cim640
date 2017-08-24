@@ -10,3 +10,7 @@ Here is other message
 find me in pacific ocean
 
 
+[click here for google](http://www.google.com)
+
+
+###[zeven's site](http://www.zevenrodriguez.com)
