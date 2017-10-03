@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My App</title>
+
+    <style>
+    
+    </style>
+
+</head>
+    
+    
+    
+<body>
+
+<h2>Celcius to Fahrenhet</h2>
+
+ <form>
+     <label for="celsius">Enter a number </label>
+     
+     
+<img src="https://static.bhphotovideo.com/explora/sites/default/files/Color-Temperature.jpg">
+     
+     
+     <p><input id="c" onkeyup="convert('C')"> degrees Celsius</p>
+
+     <p><input id="f" onkeyup="convert('F')"> degrees Fahrenheit</p> 
+     
+        <br>
+        <br>
+
+
+    </form>
+
+
+
+<script>
+function convert(degree) {
+    var x;
+    if (degree == "C") {
+        x = document.getElementById("c").value * 9 / 5 + 32;
+        document.getElementById("f").value = Math.round(x);
+    } else {
+        x = (document.getElementById("f").value -32) * 5 / 9;
+        document.getElementById("c").value = Math.round(x);
+        
+        
+        var outputText = document.getElementById("output");
+            
+            console.log(outputText);
+            
+            outputText.innerHTML = message;
+    
+        var getButton = document.getElementById("lButton");
+        
+        
+        getButton.addEventListener("click", convert);
+    }
+}
+</script>
+
+</body>
+</html>

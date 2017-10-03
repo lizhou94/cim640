@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title>Lifetime Supply of Oreo cookies</title>
+ 
+</head>
+ 
+ 
+<body>
+  
+    
+    <h1>Lifetime Supply of Oreo cookies</h1>
+   
+    <h3><i>How much oreo cookies will you need to last you a lifetime?</i></h3>
+   
+    <br>
+   
+    <p>Enter your current age below in order to calculate the amount of oreo cookies you will need to last you a lifetime.</p>
+   
+    <div id="output"></div>
+   
+    <form>
+        <label for="age">How old are you?</label>
+        <input type="text" name="age" id="age">
+        <button type="button" id="ageButton">CLICK FOR ANSWER</button>
+    </form>
+    
+    <img src="http://nutritionbeast.com/wp-content/uploads/2013/10/10020years20of20oreo20packaging208-620x350.jpg">
+   
+    <script>
+       
+     function calculateSupply(){
+        var supplyAmount = document.getElementById("age").value;
+        console.log("Supply Amount" + supplyAmount);
+       
+        var maxAge = 86;
+       
+        var numPerDay = supplyAmount / 365
+        
+        var totalNeeded = (numPerDay * 365) * (maxAge - supplyAmount);
+        console.log(totalNeeded);
+        
+        var message = "You will need " + totalNeeded + " bars of oreo cookies to last you until the age of " + maxAge;
+        console.log(message);
+        
+            var outputText = document.getElementById("output");
+            outputText.innerHTML = message;
+       
+    }
+   
+    var getButton = document.getElementById("ageButton");
+    getButton.addEventListener("click", calculateSupply);
+       
+    </script>
+ 
+</body>
+ 
+</html>

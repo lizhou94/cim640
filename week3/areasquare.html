@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Area of a Square</title>
+</head>
+<body>
+<h3>Area of a Square (A = S * S)</h3>
+    <form>
+      <label for="areaSquare">Length of each side: </label>
+        
+
+      <input id="areaSquare"> <br>
+
+      <label for="AreaSquare"> Area of square: </label>
+        
+        
+      <output id="answerAreaSquare"></output> <br>
+
+      <input type="submit" value="Submit">
+        
+        
+    </form>
+    
+    <img src="https://i.ytimg.com/vi/rb8Y38eilRM/maxresdefault.jpg" height="50%" width="50%" alt=""/> 
+    
+<script>
+
+(function () {
+
+
+  function areaSquare(event) {
+    var side = document.getElementById("areaSquare").value;
+    var answer = side*side;
+    document.getElementById("answerAreaSquare").value = answer;
+    event.preventDefault();
+  }
+    
+ document.addEventListener('submit', areaSquare);
+})();
+  </script>
+
+</body>
+</html>

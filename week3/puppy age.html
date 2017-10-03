@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title>Puppy Age Calculator</title>
+ 
+    <style>
+   
+    </style>
+ 
+</head>
+ 
+ 
+<body>
+ 
+    <h1>Calculates your dog's age based on the conversion rate of 1 human year to 7 dog years.</h1>
+ 
+    <p><i>How old is your dog in dog years?</i></p>
+   
+    <br><br>
+   
+    <form>
+        <label for="age">Age of Puppy:</label>
+        <input type="number" name="age" id="age" min="0" max="100">
+        <br><br>
+        <button type="button" id="PuppyButton">Click for Answer</button>
+        <br><br>
+    </form>
+   
+    <div id="output"></div>
+    
+    <img src="https://cdnimg.in/wp-content/uploads/2015/12/puppy5.jpg?2bbdf3">
+ 
+    <script>
+ 
+        function calcPuppyAge(){
+            var PuppyAge = document.getElementById("age").value;
+            console.log(PuppyAge + "age");
+           
+            var PuppyAgeCalc = PuppyAge * 7;
+            console.log(PuppyAgeCalc);
+           
+            var message = "Your dog is " + PuppyAgeCalc + " in dog years!";
+            console.log(message);
+           
+            var outputText = document.getElementById("output");
+            outputText.innerHTML = message;
+           
+        }
+       
+        var getButton = document.getElementById("PuppyButton");
+        getButton.addEventListener("click", calcPuppyAge);
+ 
+    </script>
+ 
+</body>
+ 
+</html>
