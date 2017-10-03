@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Quiz</title>
+
+    <style>
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <h1>Quiz</h1>
+
+    <p><i>Answer the following questions</i></p>
+
+    <form>
+
+
+        <label for="question1">Incorrect assumptions about how words relate to each other can lead to spelling mistakes. Which of the words below is spelled incorrectly?</label>
+        <select name="question1" id="question1" class="question">
+            <option value="sacreligious">sacreligious</option>
+            <option value="inoculate">inoculate</option>
+            <option value="consensus">consensus</option>
+            <option value="liquefy">liquefy</option>
+            
+
+        </select>
+
+        <br>
+        <br>
+
+        <label for="question2">which is the correct spelling of the following word?</label>
+        <select name="question2" id="question2" class="question">
+            <option value="accomodate">accomodate</option>
+            <option value="accommodate">accommodate</option>
+            <option value="acommodate">acommodate</option>
+        </select>
+
+        <br>
+        <br>
+
+        <label for="question3">Which country has the highest in Barley Production</label>
+        <select name="question3" id="question3" class="question">
+            <option value="China">China</option>
+            <option value="India">India</option>
+            <option value="Russia">Russia</option>
+            <option value="France">France</option>
+        </select>
+
+        <br>
+        <br>
+        
+        <label for="question4">The World Largest desert is?</label>
+        <select name="question4" id="question4" class="question">
+            <option value="Thar">Thar</option>
+            <option value="Kalahari">Kalahari</option>
+            <option value="Sahara">Sahara</option>
+            <option value="Sonoran">Sonoran</option>
+        </select>
+        
+        <br>
+        <br>
+        
+        <label for="question5">The hottest planet in the solar system?</label>
+        <select name="question5" id="question5" class="question">
+            <option value="Earth">Earth</option>
+            <option value="Venus">Venus</option>
+            <option value="Mars">Mars</option>
+            <option value="Jupiter">Jupiter</option>
+        <select>
+        
+        <br>
+        <br>
+            
+
+        <button type="button" id="submitAnswers">Submit Answers</button>
+
+    </form>
+
+    <br>
+
+    <div id="outputText"></div>
+
+    <script>
+       
+        function checkAnswers() {
+            var counter = 0;
+            var answerRatio = 0;
+            var getResponse = document.getElementsByClassName("question");
+         
+            var output = document.getElementById("outputText");
+            if (getResponse[0].value == answers[0]) {
+                counter = counter + 1;
+            }
+            if (getResponse[1].value == answers[1]) {
+                counter++;
+            }
+            if (getResponse[2].value == answers[2]) {
+                counter++;
+             }
+            if (getResponse[3].value == answers[3]) {
+                counter++;
+             }
+            if (getResponse[4].value == answers[4]) {
+                counter++;
+             }
+            answerRatio = (counter / getResponse.length) * 100;
+            console.log("Percent of questions right: " + answerRatio)
+            if (answerRatio > 60) {
+                output.innerHTML = "You are pretty smart";
+            }else{
+                output.innerHTML = "You need some work";
+            }
+        }
+        var answers = ["sacreligious", "accommodate", "Russia", "Sahara", "Venus"];
+        var getButton = document.getElementById("submitAnswers");
+        getButton.addEventListener("click", checkAnswers);
+    </script>
+
+</body>
+
+</html>
