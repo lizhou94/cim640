@@ -14,14 +14,22 @@ function setup() {
                 strokeWeight(5);
                 fill("white")
                 ellipse(250, 115, 120, 120);
+                strokeWeight(3);
+                fill("yellow");
+    
+                stroke("black")
+                triangle(200, 250, 250, 190, 255, 200);
                 strokeWeight(5);
                 fill("red")
                 rect(210, 90, 15, 15);
-               
+    
+                strokeWeight(2);
+                line(250, 80, 250, 100);
                 
                 strokeWeight(5);
                 fill("red")
                 rect(270, 90, 15, 15);
+    
                 arc(250,150,25,25,170,24.7);
                 
  
