@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title>My App</title>
+ 
+    <style>
+   
+
+    </style>
+ 
+</head>
+ 
+ 
+<body>
+
+ 
+    <h1>How far have you travelled from Miami, Florida to New York</h1>
+    <p>My program focuses on distance from Miami to New York. First, I need the users to tell me the number of miles they have driven. I will use a a form text input for this. The user would have to click on a button to submit their answer. I will need a button. When the user clicks the button, I will activate my calculation function. In my function, I need to get the value of the form input. I will grab the number divide it by 1634 the avergae miles and multiply by 100. This will give me a percentage. Then I will return a message telling them how far they have gone. 
+    <br>
+    input= current miles<br>
+    output= percent of how far users have gone<br>
+    milesCalculation = (currentMiles/averageMiles) * 100<br>
+    average miles= 1634</p>
+ 
+    <p><i>Enter your how many miles you have driven in order to figure out how far you have gone.</i></p>
+ 
+    <img src="http://www.visitflorida.com/content/dam/visitflorida/en-us/images/cities/miami/Downtown2011_08.jpg" height="50%" width="50%" alt=""/>
+ 
+    <br>
+    <br>
+ 
+    <form>
+        <label for="miles">Enter number of miles:</label>
+        <input type="text" name="miles" id="miles">
+ 
+        <br>
+        <br>
+ 
+
+        <button type="button" id="mButton">Enter Miles</button>
+ 
+        <br>
+        <br>
+ 
+        <div id="output"></div>
+ 
+    </form>
+ 
+    <script>
+  
+        function NYdistance() {
+            var currentMiles = document.getElementById("miles").value;
+            console.log("Current Miles: " + currentMiles);
+           
+            var milesCalculation = (currentMiles/averageMiles) * 100
+           
+            milesCalculation = Math.round(milesCalculation);
+           
+            console.log(milesCalculation);
+           
+            var message = "You have driven " + milesCalculation + "% of the way!";
+            console.log(message);
+            
+            var outputText = document.getElementById("output");
+            outputText.innerHTML = message;
+        }
+       
+      var averageMiles = 1634;
+       
+        var getButton = document.getElementById("mButton");
+        getButton.addEventListener("click", NYdistance);
+        
+    </script>
+    
+ 
+</body>
+ 
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My App</title>
+
+    <style>
+        
+    </style>
+
+</head>
+
+    
+    
+<body>
+<h1>The Temperature Converter </h1>
+
+<p>My program focuses on calculating degrees of Celsius, when degrees of Fahrenheit is given and vice versa. First, I need the users to tell me the degrees of Celsius. I will use a form text input for this. In my function, I need to get the value of the form input. When users enter the number, answers appears automatically. Then I will get the result.<br><br>
+    
+input= degrees Celsius<br>
+output= degrees Fahrenheit<br>
+celsiusInF = (celsius*9)/5 + 32<br>
+fahrenheitInC = ((fahrenheit - 32)*5)/9<br> 
+</p>
+
+
+ <form>
+     <label for="celsius">Enter a number </label>
+     
+     
+     <p><input id="c" onkeyup="convert('C')"> degrees Celsius</p>
+
+     <p><input id="f" onkeyup="convert('F')"> degrees Fahrenheit</p> 
+     
+        <br>
+        <br>
+
+
+    </form>
+    
+<img src="https://static.bhphotovideo.com/explora/sites/default/files/Color-Temperature.jpg">
+
+
+<script>
+function convert(degree) {
+    var x;
+    if (degree == "C") {
+        x = document.getElementById("c").value * 9 / 5 + 32;
+        document.getElementById("f").value = Math.round(x);
+    } else {
+        x = (document.getElementById("f").value -32) * 5 / 9;
+        document.getElementById("c").value = Math.round(x);
+        
+        
+        var outputText = document.getElementById("output");
+            
+            console.log(outputText);
+            
+            outputText.innerHTML = message;
+      
+
+    
+        var getButton = document.getElementById("lButton");
+        
+        
+        getButton.addEventListener("click", convert);
+    }
+}
+</script>
+
+</body>
+</html>

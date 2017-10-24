@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title>Lifetime Supply of Oreo cookies</title>
+ 
+</head>
+ 
+ 
+<body>
+  
+    
+    <h1>Lifetime Supply of Oreo cookies</h1>
+   
+    <p>My program focuses on calculating the amount of oreo cookies you will need to last you a lifetime. First, I need the users to tell me their age. I will use a a form text input for this. The user would have to click on a button to submit their answer. I will need a button. When the user clicks the button, I will activate my calculation function. In my function, I need to get the value of the form input. Then I will get the result. The variables are listed below <br><br>
+    input= current age<br>
+    output= the amount of cookies you will need to last you to 86 years old<br>
+    maxAge=86<br>
+    numPerDay= supply amount /365<br>
+    totalNeeded= (numPerDay * 365) * (maxAge - supplyAmount) </p>
+    
+    
+    <h3><i>How much oreo cookies will you need to last you a lifetime?</i></h3>
+   
+    <br>
+   
+    <p>Enter your current age below in order to calculate the amount of oreo cookies you will need to last you a lifetime.</p>
+   
+    <div id="output"></div>
+   
+    <form>
+        <label for="age">How old are you?</label>
+        <input type="text" name="age" id="age">
+        <button type="button" id="ageButton">CLICK FOR ANSWER</button>
+    </form>
+    
+    <img src="http://nutritionbeast.com/wp-content/uploads/2013/10/10020years20of20oreo20packaging208-620x350.jpg">
+   
+    <script>
+       
+     function calculateSupply(){
+        var supplyAmount = document.getElementById("age").value;
+        console.log("Supply Amount" + supplyAmount);
+       
+        var maxAge = 86;
+       
+        var numPerDay = supplyAmount / 365
+        
+        var totalNeeded = (numPerDay * 365) * (maxAge - supplyAmount);
+        console.log(totalNeeded);
+        
+        var message = "You will need " + totalNeeded + " bars of oreo cookies to last you until the age of " + maxAge;
+        console.log(message);
+        
+            var outputText = document.getElementById("output");
+            outputText.innerHTML = message;
+       
+    }
+   
+    var getButton = document.getElementById("ageButton");
+    getButton.addEventListener("click", calculateSupply);
+       
+    </script>
+ 
+</body>
+ 
+</html>
